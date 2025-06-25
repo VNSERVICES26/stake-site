@@ -37,6 +37,11 @@ const NETWORK_CONFIG = {
     rpcUrl: "https://bsc-dataseed.binance.org/",
     explorer: "https://bscscan.com"
   },
+  97: {
+    name: "Binance Smart Chain Testnet",
+    rpcUrl: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+    explorer: "https://testnet.bscscan.com"
+  },
   137: {
     name: "Polygon",
     rpcUrl: "https://polygon-rpc.com/",
