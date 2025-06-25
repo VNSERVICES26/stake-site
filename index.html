@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VNST Staking - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="VNST Logo" class="logo">
+      <span>VNST Staking</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="staking.html"><i class="fas fa-coins"></i> Staking</a>
+      <a href="team.html"><i class="fas fa-users"></i> Team</a>
+      <button id="connect-wallet" class="connect-btn pulse">
+        <i class="fas fa-wallet"></i>
+        <span>Connect Wallet</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="slide-in">VNST Staking Platform</h1>
+        <p class="slide-in">Earn 2X rewards on your staked VNST tokens</p>
+      </div>
+      <div class="wallet-info" id="wallet-info" style="display: none;">
+        <div class="wallet-address">
+          <span id="connected-address"></span>
+          <button id="copy-address" class="btn-small">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+        <div class="referral-link">
+          <input type="text" id="referral-link" readonly>
+          <button id="copy-referral" class="btn-small">
+            <i class="fas fa-copy"></i>
+          </button>
+          <button id="share-referral" class="btn-small">
+            <i class="fas fa-share-alt"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-stats">
+      <h2 class="section-title"><i class="fas fa-chart-bar"></i> System Statistics</h2>
+      
+      <div class="stats-grid">
+        <div class="stat-card glow">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Total Users</h3>
+            <p id="total-users">0</p>
+          </div>
+        </div>
+        
+        <div class="stat-card glow">
+          <div class="stat-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Total Staked</h3>
+            <p id="total-staked">0 VNST</p>
+          </div>
+        </div>
+        
+        <div class="stat-card glow">
+          <div class="stat-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Active Stakes</h3>
+            <p id="active-stakes">0</p>
+          </div>
+        </div>
+        
+        <div class="stat-card glow">
+          <div class="stat-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <div class="stat-info">
+            <h3>Total Withdrawn</h3>
+            <p id="total-withdrawn">0 VNST</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <h2 class="section-title"><i class="fas fa-bolt"></i> Quick Actions</h2>
+      <div class="action-buttons">
+        <a href="staking.html" class="btn-primary pulse">
+          <i class="fas fa-coins"></i> Start Staking
+        </a>
+        <a href="team.html" class="btn-secondary">
+          <i class="fas fa-users"></i> View Team
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Wallet Connection Modal -->
+  <div id="wallet-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2><i class="fas fa-wallet"></i> Connect Wallet</h2>
+      
+      <div class="wallet-options">
+        <button id="metamask-btn" class="wallet-btn">
+          <img src="images/metamask.png" alt="MetaMask">
+          <span>MetaMask</span>
+        </button>
+        
+        <button id="walletconnect-btn" class="wallet-btn">
+          <img src="images/walletconnect.png" alt="WalletConnect">
+          <span>Any Wallet</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
