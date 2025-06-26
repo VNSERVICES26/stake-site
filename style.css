@@ -614,4 +614,29 @@ a {
   .stat-info p {
     font-size: 1.5rem;
   }
+
+      /* Add to style.css */
+  .status-message {
+   background: var(--primary);
+   color: white;
+   padding: 10px;
+   margin: 10px 0;
+   border-radius: 5px;
+  }
+
+  .error-message {
+   background: var(--error);
+   color: white;
+   padding: 10px;
+   margin: 10px 0;
+   border-radius: 5px;
+  }
+
+  .success-message {
+   background: var(--success);
+   color: white;
+   padding: 10px;
+   margin: 10px 0;
+   border-radius: 5px;
+  }
 }
